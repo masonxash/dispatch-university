@@ -13,7 +13,7 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   return (
-    <Box bg="green.800" color="white" px={6} py={3}>
+    <Box bg="green.900" color="white" px={6} py={3}>
       <Flex align="center" justify="space-between" maxW="7xl" mx="auto">
         <HStack gap={3}>
           <Logo />
