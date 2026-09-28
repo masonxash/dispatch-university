@@ -1,14 +1,16 @@
-import { Center, Box, Button, Card, Link } from "@chakra-ui/react"
+import { Box, Card } from "@chakra-ui/react"
 import { Image } from "@chakra-ui/react"
 import { Link as ChakraLink } from "@chakra-ui/react"
 import NextLink from "next/link"
 
 const HeroCard = () => {
   return (
-    <Card.Root width="320px">
+    <Box>
+     <ChakraLink asChild>
+    <NextLink href="/flambae">
+    <Card.Root  bgColor="black" width="auto">
       <Card.Body gap="2" padding="6">
         <Box borderRadius="md">
-          <Center>
             <Box px="4" py="2" borderRadius="md">
               <Image
                 src="./images/flambae.jpg"
@@ -18,21 +20,18 @@ const HeroCard = () => {
                 alt="Flambae"
               />
             </Box>
-          </Center>
         </Box>
-        <Card.Title mt="2">Flambae (Pyrokinesis) </Card.Title>
-        <Card.Description>
-          All boob and all brawn, this hero is hot headed.
+        <Card.Title color={"white"} mt="2">Flambae (Pyrokinesis) </Card.Title>
+        <Card.Description color={"white"}>
+          All boob and all brawn, this hero is hot headed. View his file to learn more about the mechanics of his fuego.
         </Card.Description>
       </Card.Body>
       <Card.Footer justifyContent="flex-end" paddingX="6" paddingY="4">
-        <Box>
-       <ChakraLink asChild>
-      <NextLink href="/flambae">View File</NextLink>
-    </ChakraLink>
-</Box>
       </Card.Footer>
     </Card.Root>
+    </NextLink>
+    </ChakraLink>
+    </Box>
   )
 }
 
